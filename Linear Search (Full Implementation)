@@ -1,0 +1,45 @@
+Linear Search – this is the process of looping continously through an array or string from the first – last element until you find the match that you are searching for and return the position at which that content is found or perform an operation with the results.
+
+Implementation (Pseudo-code)
+a.	Create a function with two inputs… - an array, and a value you intend to find in the array.
+b.	Within the function, create loop that will iterate from the beginning or first index of the array or string until the last index. 
+c.	Within the loop, create an if statement that will use the array-content at every iteration and check to see whether its equal to the value you are searching for. If yes, return the index of the array-content that matches the result or perform additional operations on the result.
+d.	If there is no result until the end of the loop, return (-1) outside of the loop (but within the function block) to show no-result found.
+
+Example (Concrete)
+Given an array arr[] of n elements, write a function to search a given element x in arr[].
+
+Input : arr[] = {10, 20, 80, 30, 60, 50, 110, 100, 130, 170}
+x = 110;
+Output : Element x is present at index 6
+
+
+// Create a helper function to loop though the array and also take two parameters
+function searchArr(arr, num){
+	// Loop that will iterate through the arr
+	for(let i = 0; i < arr.length; i++){
+		// If statement that will check each element from the loop for the number
+		if(arr[i] === num){
+			// When the number is found
+			return i;
+		}
+	}
+	// When the number is not found
+	return -1;
+}
+
+// Function that will be used to show the appropriate result from the helper function
+// This function will also take two parameter
+function showResult(array, number){
+	// This variable will store the appropriate return value from the helper function
+	let result = searchArr(array, number);
+// This If statement will display the appropriate message based on the result of the return value
+	if(result === -1){
+		console.log("The number was not found");
+	}else{
+		console.log("The result was found at " + result);
+	}
+}
+
+// This will execute the function
+showResult([10, 20, 80, 30, 60, 50, 110, 100, 130, 170], 110)
