@@ -28,7 +28,7 @@ function searchArr(arr, num){
 	return -1;
 }
 
-// Function that will be used to show the appropriate result from the helper function
+// Function that will be used to show the appropriate result from the helper function 
 // This function will also take two parameter
 function showResult(array, number){
 	// This variable will store the appropriate return value from the helper function
