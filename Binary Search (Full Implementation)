@@ -22,7 +22,7 @@ function binarySearch(arr, elem) {
 	var end = arr.length - 1;
 	// This will calculate the middle index in the array
 	var middle = Math.floor((start + end) / 2);
-	// This loop will run continously as long as the condition is true
+	// This loop will run continously as long as the condition is true 
 	while(arr[middle] !== elem && start <= end) {
 		if(elem < arr[middle]){
 			end = middle - 1;
